@@ -1,0 +1,11 @@
+lzip: lzip (lossless data compressor based on the LZMA algorithm)
+lzip:
+lzip: Lzip is a lossless data compressor based on the LZMA algorithm, with
+lzip: very safe integrity checking and a user interface similar to the one
+lzip: of gzip or bzip2.  Lzip decompresses almost as fast as gzip and
+lzip: compresses better than bzip2, which makes it well suited for software
+lzip: distribution and data archiving.
+lzip:
+lzip:
+lzip:
+lzip: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
