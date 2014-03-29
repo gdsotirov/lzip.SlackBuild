@@ -13,11 +13,16 @@ function echo_exit {
 
 if [ -x /usr/bin/install-info ] ; then
   echo -n "Installing info pages... "
-  install-info --info-dir=/usr/info /usr/info/gmp.info.gz   2>/dev/null
-  echo_exit $? 0 
-  echo_exit $ErrCount "DONE" "FAILURE"
+  install-info --info-dir=/usr/info /usr/info/lzip.info.gz 2>/dev/null
+  echo_exit $? "DONE" "FAILURE"
   echo
 else
   echo "WARNING: Info pages cannot be installed!"
 fi
+
+# Add .lz extension in /etc/DIR_COLORS
+echo -n "Adding .lz extension to /etc/DIR_COLORS... "
+echo -e '\n# Added by lzip package' >> /etc/DIR_COLORS && echo '.lz   01;31' >> /etc/DIR_COLORS
+echo_exit $? "DONE" "FAILURE"
+echo
 
